@@ -1,0 +1,67 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.p
+*.db
+
+# Jupyter/Colab
+.ipynb_checkpoints/
+*.ipynb_convert/
+*.ipynb~
+
+# Virtual environment
+.env
+.venv
+env/
+venv/
+ENV/
+
+# VS Code / IDE
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+logs/
+*.out
+
+# Cache
+.cache/
+*.pytest_cache/
+*.mypy_cache/
+
+# Data & checkpoints
+data/
+datasets/
+*.csv
+*.tsv
+*.json
+*.parquet
+*.sqlite
+*.db
+*.ckpt
+*.pt
+*.h5
+*.onnx
+*.weights
+
+# Hugging Face / LangChain / VectorDB
+huggingface/
+.wandb/
+chromadb/
+faiss_index/
+vectorstore/
+*.lock
+
+# API Keys / Config
+*.env
+secrets.json
+config.json
+
+# Mac / OS files
+.DS_Store
+Thumbs.db
