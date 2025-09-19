@@ -1,0 +1,56 @@
+[
+  {
+    "text": "Complete Document for RAG Model Retrieval Augmented Generation (RAG) is an AI framework that enhances large language models by combining retrieval systems with generative capabilities. Here's a comprehensive overview covering all aspects of RAG models: What is RAG? RAG is the process of optimizing the output of a large language model by allowing it to reference an authoritative knowledge base outside of its training data sources before generating a response. Instead of relying solely on training data, RAG introduces an information retrieval component that first pulls relevant information from external sources, then combines this with the user query to create more accurate and contextual responses. Core Architecture RAG systems typically follow a five-stage process: 1.​ User Input: The user submits a query or prompt 2.​ Information Retrieval: The system queries external knowledge bases for relevant data 3.​ Data Return: Relevant information is returned from the knowledge base to the integration layer 4.​ Prompt Augmentation: The RAG system creates an enhanced prompt combining the original query with retrieved context 5.",
+    "id": "6197fee4-7db1-48e5-8f74-922bf85bdbb1",
+    "metadata": {
+      "filename": "Complete Document for RAG Model (1).pdf",
+      "file_hash": "bb62c5b44ffd5cdfb63411f2b9704e07",
+      "source": "uploaded_pdf"
+    }
+  },
+  {
+    "text": "​ Information Retrieval: The system queries external knowledge bases for relevant data 3.​ Data Return: Relevant information is returned from the knowledge base to the integration layer 4.​ Prompt Augmentation: The RAG system creates an enhanced prompt combining the original query with retrieved context 5.​ Response Generation: The LLM generates and returns a response using both its training knowledge and the retrieved data Key Components Primary Components: ●​ Question Encoder: Converts the input query into vector representations for processing ●​ Document Encoder: Encodes documents in the knowledge base, often trained alongside the question encoder to ensure alignment ●​ Retriever: Uses similarity-based techniques to search and select the most relevant documents ●​ Generator: Processes retrieved documents and generates coherent responses, learning in an end-to-end context Additional Components: ●​ Ranker: Evaluates and scores retrieved documents based on relevance ●​ Output Handler: Formats the generated response for the user Implementation Process Indexing Phase: Load: Document loaders ingest data from various sources (PDFs, websites, databases, APIs)​ Split: Text splitters break large documents into smaller,",
+    "id": "187baf02-a9f0-4699-b5c9-d7799a14688f",
+    "metadata": {
+      "filename": "Complete Document for RAG Model (1).pdf",
+      "file_hash": "bb62c5b44ffd5cdfb63411f2b9704e07",
+      "source": "uploaded_pdf"
+    }
+  },
+  {
+    "text": "websites, databases, APIs)​ Split: Text splitters break large documents into smaller, manageable chunks to fit model context windows​ Store: Chunks are embedded using language models and stored in vector databases for efficient retrieval Retrieval and Generation Phase: Retrieve: Given user input, relevant document chunks are retrieved using vector similarity search​ Generate: A chat model produces answers using prompts that include both the question and retrieved context Three RAG Paradigms: 1. Naive RAG ●​ Components: Indexing, retrieval, and generation in a simple chain ●​ Structure: Linear process following basic retrieve-then-generate workflow 2. Advanced RAG ●​ Enhancements: Pre-retrieval and post-retrieval optimizations ●​ Process: Similar chain-like structure but with query optimization and result refinement 3. Modular RAG ●​ Flexibility: Allows for iterative and adaptive retrieval patterns ●​ Structure: Not limited to sequential processing;",
+    "id": "29725439-37af-4a63-96a2-1603c81d6fab",
+    "metadata": {
+      "filename": "Complete Document for RAG Model (1).pdf",
+      "file_hash": "bb62c5b44ffd5cdfb63411f2b9704e07",
+      "source": "uploaded_pdf"
+    }
+  },
+  {
+    "text": "Modular RAG ●​ Flexibility: Allows for iterative and adaptive retrieval patterns ●​ Structure: Not limited to sequential processing; includes specialized functional modules Key Benefits Cost-Effective Implementation: ●​ Avoids expensive retraining of foundation models ●​ Makes generative AI more broadly accessible ●​ Reduces computational and financial costs compared to fine-tuning Current Information: ●​ Provides access to up-to-date data without retraining ●​ Can connect to live data sources (news, social media, real-time databases) ●​ Maintains relevancy through dynamic knowledge updates Enhanced User Trust: ●​ Includes source attribution and citations ●​ Allows users to verify information independently ●​ Reduces hallucinations through factual grounding Developer Control: ●​ Enables testing and improvement of chat applications ●​ Allows restriction of sensitive information by authorization levels ●​ Facilitates troubleshooting and fixes for incorrect information sources Advanced Features Query Analysis: ●​ Purpose: Transform raw user queries into optimized search queries ●​ Benefits: Enables structured filters, query rewriting, and handling of multifaceted questions ●​ Implementation: Uses models to analyze and restructure queries before retrieval Metadata Filtering: ●​ Function: Allows filtering of documents based on specific criteria ●​ Use Cases: Time-based filtering, section-specific searches,",
+    "id": "01d1d6d1-d80c-45d3-aece-2e577eef41ea",
+    "metadata": {
+      "filename": "Complete Document for RAG Model (1).pdf",
+      "file_hash": "bb62c5b44ffd5cdfb63411f2b9704e07",
+      "source": "uploaded_pdf"
+    }
+  },
+  {
+    "text": "query rewriting, and handling of multifaceted questions ●​ Implementation: Uses models to analyze and restructure queries before retrieval Metadata Filtering: ●​ Function: Allows filtering of documents based on specific criteria ●​ Use Cases: Time-based filtering, section-specific searches, access control ●​ Example: \"Find documents since 2020\" or \"Search only in technical documentation\" Technical Implementation Vector Embeddings: External data is converted into numerical representations using embedding language models and stored in vector databases, creating a searchable knowledge library. Similarity Search: User queries are converted to vector representations and matched against the vector database using mathematical calculations to determine relevance. Prompt Engineering: Retrieved context is integrated into prompts using specific techniques to effectively communicate with the language model. Comparison with Semantic Search While both RAG and semantic search involve information retrieval, RAG extends beyond search by integrating retrieved information into generative responses. Semantic search enhances RAG by providing more accurate document retrieval at scale, handling complex queries across disparate information systems.",
+    "id": "c7df684c-6d5c-43ed-a7b8-01d47ed6d1d9",
+    "metadata": {
+      "filename": "Complete Document for RAG Model (1).pdf",
+      "file_hash": "bb62c5b44ffd5cdfb63411f2b9704e07",
+      "source": "uploaded_pdf"
+    }
+  },
+  {
+    "text": "Comparison with Semantic Search While both RAG and semantic search involve information retrieval, RAG extends beyond search by integrating retrieved information into generative responses. Semantic search enhances RAG by providing more accurate document retrieval at scale, handling complex queries across disparate information systems. Applications and Use Cases RAG is particularly effective for: ●​ Question-answering systems over specific knowledge bases ●​ Customer support chatbots with access to company documentation ●​ Technical documentation assistance ●​ Personal knowledge assistants with up-to-date information ●​ Domain-specific content generation without model retraining Challenges and Limitations: ●​ Finite context length: Limited capacity for historical information and detailed instructions ●​ Long-term planning: Difficulty in planning over lengthy histories and exploring solution spaces ●​ Error handling: LLMs struggle to adjust plans when encountering unexpected errors ●​ Representation power: Vector stores provide access to larger knowledge but lack the power of full attention mechanisms This comprehensive overview covers the essential aspects of RAG models, from basic concepts to advanced implementation details, providing a complete foundation for understanding and implementing retrieval-augmented generation systems.",
+    "id": "de589518-a58b-4531-a852-6d2ea132d873",
+    "metadata": {
+      "filename": "Complete Document for RAG Model (1).pdf",
+      "file_hash": "bb62c5b44ffd5cdfb63411f2b9704e07",
+      "source": "uploaded_pdf"
+    }
+  }
+]

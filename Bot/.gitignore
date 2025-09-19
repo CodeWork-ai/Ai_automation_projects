@@ -1,0 +1,31 @@
+__pycache__/
+*.pyc
+.env
+venv/Bot\.env
+/Bot/doc_ai_env
+/Bot\__pycache__# Ignore virtual environments
+/Bot/doc_ai_env/
+/venv/
+/env/
+
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.so
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.*
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# VSCode settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db

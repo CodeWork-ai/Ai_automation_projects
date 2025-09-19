@@ -1,0 +1,24 @@
+# Core packages
+streamlit==1.33.0
+python-dotenv==1.0.1
+
+# LangChain packages (updated compatible versions)
+langchain==0.2.14
+langchain-openai==0.1.14
+langchain-community==0.2.12
+langchain-core==0.2.32      
+langchain-text-splitters==0.2.2
+
+# LlamaIndex packages
+llama-index==0.10.29
+llama-index-core==0.10.29
+llama-index-readers-file==0.1.4
+llama-index-embeddings-openai==0.1.6
+llama-index-retrievers-bm25==0.1.3
+
+# Supporting packages
+chromadb==0.4.24
+tiktoken==0.7.0
+openai==1.37.0
+numpy==1.24.4
+PyMuPDF==1.23.26
