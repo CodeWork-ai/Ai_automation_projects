@@ -1,0 +1,5 @@
+streamlit
+groq
+PyGithub
+jira
+python-dotenv
