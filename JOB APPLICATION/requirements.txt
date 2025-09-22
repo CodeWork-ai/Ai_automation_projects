@@ -1,0 +1,8 @@
+streamlit
+python-dotenv
+groq
+python-docx
+PyPDF2
+requests
+paddleocr
+paddlepaddle
