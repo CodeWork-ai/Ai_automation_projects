@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Research Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-chart-line"></i> Market Research Assistant</h1>
+            <p>Analyze competitor websites and generate market research digests using AI</p>
+        </header>
+
+        <main>
+            <!-- Health Status Section -->
+            <section id="health-status" class="card">
+                <h2><i class="fas fa-heartbeat"></i> Backend Status</h2>
+                <div class="health-indicator" id="health-indicator">
+                    <span class="status-text">Checking...</span>
+                </div>
+            </section>
+
+            <!-- Research Form Section -->
+            <section id="research-form" class="card">
+                <h2><i class="fas fa-search"></i> Start Market Research</h2>
+                <form id="researchForm">
+                    <div class="form-group">
+                        <label for="modelSelect">AI Model:</label>
+                        <select id="modelSelect" name="model">
+                            <option value="google/flan-t5-base">google/flan-t5-base (Default)</option>
+                            <option value="google/flan-t5-small">google/flan-t5-small</option>
+                            <option value="google/flan-t5-large">google/flan-t5-large</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="useDefault" checked> Use default competitors
+                        </label>
+                    </div>
+
+                    <!-- Default Competitors Display -->
+                    <div id="defaultCompetitorsDisplay" class="competitors-display">
+                        <h3>Default Competitors</h3>
+                        <div id="defaultCompetitorsList" class="competitors-list">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <div id="customCompetitors" class="hidden">
+                        <h3>Custom Competitors</h3>
+                        <div id="competitorsList">
+                            <div class="competitor-item">
+                                <input type="text" placeholder="Name" class="competitor-name">
+                                <input type="url" placeholder="URL" class="competitor-url">
+                                <textarea placeholder="Content selectors (comma separated)" class="competitor-content">main, .content, article</textarea>
+                                <textarea placeholder="Exclude selectors (comma separated)" class="competitor-exclude">nav, footer, .sidebar</textarea>
+                                <button type="button" class="remove-competitor">Remove</button>
+                            </div>
+                        </div>
+                        <button type="button" id="addCompetitor">Add Competitor</button>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-play"></i> Start Research
+                    </button>
+                </form>
+            </section>
+
+            <!-- URLs Being Scraped Section -->
+            <section id="urls-section" class="card hidden">
+                <h2><i class="fas fa-link"></i> URLs Being Scraped</h2>
+                <div id="urlsList" class="urls-list">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Task Status Section -->
+            <section id="task-status" class="card hidden">
+                <h2><i class="fas fa-tasks"></i> Task Status</h2>
+                <div class="status-info">
+                    <p><strong>Task ID:</strong> <span id="taskId">-</span></p>
+                    <p><strong>Status:</strong> <span id="taskStatus">-</span></p>
+                    <p><strong>Message:</strong> <span id="taskMessage">-</span></p>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section id="results" class="card hidden">
+                <h2><i class="fas fa-file-alt"></i> Research Results</h2>
+                <div class="results-content">
+                    <pre id="digestText"></pre>
+                    <button id="downloadBtn" class="download-btn">
+                        <i class="fas fa-download"></i> Download Digest
+                    </button>
+                </div>
+            </section>
+
+            <!-- Scraped Content Section -->
+            <section id="scraped-content" class="card hidden">
+                <h2><i class="fas fa-code"></i> Scraped Content</h2>
+                <div class="tab-container">
+                    <div class="tab-buttons">
+                        <!-- Dynamic tabs will be added here -->
+                    </div>
+                    <div class="tab-content">
+                        <!-- Dynamic content will be added here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Logs Section -->
+            <section id="logs" class="card">
+                <h2><i class="fas fa-terminal"></i> Backend Logs</h2>
+                <div class="logs-content">
+                    <div class="button-group">
+                        <button id="refreshLogs" class="refresh-btn">
+                            <i class="fas fa-sync-alt"></i> Refresh Logs
+                        </button>
+                    </div>
+                    <pre id="logText">Loading logs...</pre>
+                </div>
+            </section>
+
+            <!-- Historical Data Section -->
+            <!-- <section id="historical-data" class="card">
+                <h2><i class="fas fa-history"></i> Historical Data</h2>
+                <div class="historical-content">
+                    <div class="button-group">
+                        <button id="refreshHistorical" class="refresh-btn">
+                            <i class="fas fa-sync-alt"></i> Refresh Data
+                        </button>
+                        <button id="toggleHistoricalView" class="toggle-btn">
+                            <i class="fas fa-list"></i> Toggle View
+                        </button>
+                    </div>
+                    <div class="historical-stats">
+                        <span id="historicalStats">Loading historical data...</span>
+                    </div>
+                    <div class="historical-data-container">
+                        <div id="historicalSections" class="sections-view">
+                            <!-- Sections will be populated here -->
+                        </div>
+                        <div id="historicalRaw" class="raw-view hidden">
+                            <pre id="historicalRawText">Loading...</pre>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+        </main>
+
+        <footer>
+            <p>Built with FastAPI and modern web technologies</p>
+        </footer>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification hidden">
+        <span class="notification-message"></span>
+        <button class="notification-close">&times;</button>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
