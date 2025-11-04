@@ -1,0 +1,6 @@
+phidata
+streamlit
+python-dotenv
+groq
+duckduckgo-search
+fpdf

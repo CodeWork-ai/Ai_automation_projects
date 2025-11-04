@@ -1,0 +1,13 @@
+streamlit
+streamlit-drawable-canvas
+audio-recorder-streamlit
+numpy
+speechrecognition
+pillow
+opencv-python-headless
+scipy
+transformers
+torch
+torchaudio
+scikit-learn
+opencv-contrib-python-headless
