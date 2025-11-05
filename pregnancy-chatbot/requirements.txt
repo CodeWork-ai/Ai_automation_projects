@@ -1,0 +1,9 @@
+streamlit
+langchain-groq
+langchain
+langchain-community
+chromadb
+sentence-transformers
+python-dotenv
+unstructured
+twilio

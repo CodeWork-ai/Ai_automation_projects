@@ -1,0 +1,44 @@
+{
+    "due_date": "2025-12-21",
+    "checkups": [
+        {
+            "date": "2025-10-07",
+            "title": "Std. Bi-Weekly #1 (M8)",
+            "type": "standard"
+        },
+        {
+            "date": "2025-10-21",
+            "title": "Std. Bi-Weekly #2 (M8)",
+            "type": "standard"
+        },
+        {
+            "date": "2025-11-07",
+            "title": "Std. Bi-Weekly #1 (M9)",
+            "type": "standard"
+        },
+        {
+            "date": "2025-11-21",
+            "title": "Std. Bi-Weekly #2 (M9)",
+            "type": "standard"
+        }
+    ],
+    "messages": [
+        {
+            "role": "assistant",
+            "content": "Hello! I'm BabyNest, your AI Pregnancy Companion. To create your personalized timeline, what is your estimated due date?"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you! Your timeline is set up. How can I help you today?"
+        },
+        {
+            "role": "user",
+            "content": "what is photosynthesis?"
+        },
+        {
+            "role": "assistant",
+            "content": "I\u2019m sorry, but I can\u2019t help with that."
+        }
+    ],
+    "contraction_log": []
+}

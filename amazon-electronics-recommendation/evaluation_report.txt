@@ -1,0 +1,22 @@
+================================================================================
+AMAZON ELECTRONICS RECOMMENDATION SYSTEM - EVALUATION REPORT
+================================================================================
+
+
+Collaborative_Filtering:
+----------------------------------------
+  RMSE: 4.5047
+  MAE: 4.3517
+
+Content_Based:
+----------------------------------------
+  Avg_Similarity: 0.5358
+  Std_Similarity: 0.1529
+  Avg_Recommendations: 10.0000
+  Coverage: 1.0000
+
+Hybrid:
+----------------------------------------
+  Precision@5: 0.0800
+  Recall@5: 0.1200
+  AUC: 0.7500

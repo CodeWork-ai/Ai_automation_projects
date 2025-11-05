@@ -1,0 +1,17 @@
+flask
+flask-cors
+langchain-community
+langchain-huggingface
+sqlalchemy
+langchain
+langgraph
+mysql-connector-python
+python-dotenv
+requests
+huggingface_hub
+transformers
+torch
+sentencepiece
+tabulate
+pandas
+langchain-core
