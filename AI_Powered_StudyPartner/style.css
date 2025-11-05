@@ -1,0 +1,125 @@
+/* General App Styling */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+/* Custom Button Styling */
+.stButton > button {
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+    padding: 10px 20px !important;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.stButton > button[kind="primary"] {
+    background-color: #6c47ff;
+    color: white;
+    border: 2px solid #6c47ff;
+}
+
+.stButton > button[kind="primary"]:hover {
+    background-color: #5639cc;
+    border: 2px solid #5639cc;
+}
+
+/* --- NEW: Interactive MCQ Option Styling --- */
+.option-box {
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 0.75rem;
+    border: 2px solid;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.option-correct {
+    background-color: #e6f9f1;
+    border-color: #5dd89f;
+    color: #0c3c23;
+}
+
+.option-incorrect {
+    background-color: #ffebee;
+    border-color: #f44336;
+    color: #b71c1c;
+}
+
+.option-neutral {
+    background-color: #f0f2f6;
+    border-color: #d1d5db;
+    color: #4b5563;
+    opacity: 0.6; /* Fade out unselected options */
+}
+/* --- END: New MCQ Styles --- */
+
+
+/* --- NEW: Explanation Box Styling --- */
+.explanation-box {
+    margin-top: 1rem;
+    padding: 1.25rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 5px solid #6c47ff;
+}
+
+.brief-explanation {
+    background-color: #f0f2f6;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.explain-further-button > button {
+    background-color: transparent !important;
+    color: #6c47ff !important;
+    border: none !important;
+    padding: 0 !important;
+    font-weight: 600 !important;
+    text-align: left !important;
+}
+
+.explain-further-button > button:hover {
+    text-decoration: underline;
+    color: #5639cc !important;
+}
+/* --- END: New Explanation Box Styles --- */
+
+
+/* Flashcard Styling */
+.flashcard-container {
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.flashcard {
+    background-color: #fff5e1; /* Changed to a warmer cream color */
+    padding: 2rem;
+    border: 1px solid #e0d8c1; /* Adjusted border to match */
+    border-radius: 18px;
+    min-height: 300px;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.flashcard .question-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}

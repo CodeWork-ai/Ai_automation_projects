@@ -1,0 +1,7 @@
+# in requirements.txt
+groq
+firecrawl-py
+google-api-python-client
+python-dotenv
+nltk
+scikit-learn
